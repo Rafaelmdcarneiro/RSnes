@@ -1,0 +1,26 @@
+[package]
+name = "save-state-macro"
+version = "0.1.0"
+edition = "2021"
+description = "save state derive macro helper crate for rsnes"
+
+[lib]
+proc-macro = true
+
+[profile.release]
+opt-level = 3
+debug = false
+debug-assertions = false
+overflow-checks = false
+lto = "fat"
+panic = "abort"
+incremental = false
+codegen-units = 1
+
+[profile.release.build-override]
+opt-level = 3
+
+[dependencies]
+save-state = { path = "../save-state" }
+syn = "1.0"
+quote = "1.0"

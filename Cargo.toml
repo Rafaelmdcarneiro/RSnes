@@ -1,0 +1,8 @@
+[workspace]
+resolver = "2"
+members = [
+    "rsnes",
+    "emulator",
+    "save-state",
+    "save-state-macro"
+]
